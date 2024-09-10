@@ -1,6 +1,5 @@
 import { KeyTextField } from "@prismicio/client";
 import clsx from "clsx";
-import { MdArrowOutward } from "react-icons/md";
 import React from "react";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -14,7 +13,7 @@ type NavBarButtonProps = {
     className?: string;
 };
 
-export default function NavBarButton({ linkField, label, showIcon, className }: NavBarButtonProps) {
+export default function NavBarButton({ linkField, label, className }: NavBarButtonProps) {
     const handleScroll = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, targetId: string) => {
         event.preventDefault();  
         const targetElement = document.getElementById(targetId);  
