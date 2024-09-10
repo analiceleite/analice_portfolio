@@ -74,22 +74,22 @@ export default function NavBar({
             ))}
             <li>
               <NavBarButton
-                linkField="contact"  // Ajuste para o botão de Contato
-                label="Contato"  // Texto do botão de Contato
+                linkField="contact"  
+                label="Contato"  
                 className="ml-3"
               />
             </li>
             <li>
               <NavBarButton
-                linkField="projects"  // Ajuste para o botão de Projetos
-                label="Projetos"  // Texto do botão de Projetos
+                linkField="projects"  
+                label="Projetos" 
                 className="ml-3"
               />
             </li>
             <li>
               <NavBarButton
-                linkField="about"  // Ajuste para o botão de Sobre
-                label="Sobre"  // Texto do botão de Sobre
+                linkField="biography"  
+                label="Sobre"  
                 className="ml-3"
               />
             </li>
