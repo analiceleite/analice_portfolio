@@ -75,21 +75,21 @@ export default function NavBar({
             <li>
               <NavBarButton
                 linkField="contact"  
-                label="Contato"  
+                label="Contact"  
                 className="ml-3"
               />
             </li>
             <li>
               <NavBarButton
                 linkField="projects"  
-                label="Projetos" 
+                label="Projects" 
                 className="ml-3"
               />
             </li>
             <li>
               <NavBarButton
                 linkField="biography"  
-                label="Sobre"  
+                label="About"  
                 className="ml-3"
               />
             </li>
