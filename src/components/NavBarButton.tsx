@@ -21,9 +21,9 @@ export default function NavBarButton({ linkField, label, showIcon, className }: 
         if (targetElement) {
             // Usar GSAP para rolagem suave
             gsap.to(window, {
-                duration: 1,  
-                scrollTo: { y: targetElement, offsetY: 50 }, 
-                ease: "power2.inOut", 
+                duration: 1,  // Duração da animação em segundos
+                scrollTo: { y: targetElement, offsetY: 50 },  // Scroll até o elemento alvo com um offset opcional
+                ease: "power2.inOut",  // Tipo de easing para suavidade
             });
         }
     };
@@ -38,9 +38,6 @@ export default function NavBarButton({ linkField, label, showIcon, className }: 
             onClick={(e) => handleScroll(e, linkField)}  
         >
             <span className="relative z-10">{label}</span>
-            {showIcon && (
-                <MdArrowOutward className="ml-2 text-slate-800" />
-            )}
         </a>
     );
 }
