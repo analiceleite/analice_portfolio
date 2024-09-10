@@ -1,0 +1,34 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"name": {
+				"__TYPE__": "FieldContent",
+				"value": "earlier",
+				"type": "Text"
+			},
+			"subject": {
+				"__TYPE__": "FieldContent",
+				"value": "since",
+				"type": "Text"
+			},
+			"email": {
+				"__TYPE__": "FieldContent",
+				"value": "private",
+				"type": "Text"
+			},
+			"message": {
+				"__TYPE__": "FieldContent",
+				"value": "past",
+				"type": "Text"
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "second",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

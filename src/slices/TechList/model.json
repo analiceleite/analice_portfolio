@@ -1,0 +1,82 @@
+{
+  "id": "tech_list",
+  "type": "SharedSlice",
+  "name": "TechList",
+  "description": "TechList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "react_name": {
+          "type": "Text",
+          "config": {
+            "label": "React",
+            "placeholder": ""
+          }
+        },
+        "react_color": {
+          "type": "Color",
+          "config": {
+            "label": "React Color",
+            "placeholder": ""
+          }
+        },
+        "next_js_name": {
+          "type": "Text",
+          "config": {
+            "label": "Next.js",
+            "placeholder": ""
+          }
+        },
+        "next_js_color": {
+          "type": "Color",
+          "config": {
+            "label": "Next.js Color",
+            "placeholder": ""
+          }
+        },
+        "django_name": {
+          "type": "Text",
+          "config": {
+            "label": "Django",
+            "placeholder": ""
+          }
+        },
+        "django_color": {
+          "type": "Color",
+          "config": {
+            "label": "Django Color",
+            "placeholder": ""
+          }
+        },
+        "java_name": {
+          "type": "Text",
+          "config": {
+            "label": "Java",
+            "placeholder": ""
+          }
+        },
+        "java_color": {
+          "type": "Color",
+          "config": {
+            "label": "Java Color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

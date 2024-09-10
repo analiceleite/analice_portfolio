@@ -1,0 +1,54 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "larger",
+				"type": "Text"
+			},
+			"react_name": {
+				"__TYPE__": "FieldContent",
+				"value": "whose",
+				"type": "Text"
+			},
+			"react_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#3631c8",
+				"type": "Color"
+			},
+			"next_js_name": {
+				"__TYPE__": "FieldContent",
+				"value": "on",
+				"type": "Text"
+			},
+			"next_js_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#1a6db0",
+				"type": "Color"
+			},
+			"django_name": {
+				"__TYPE__": "FieldContent",
+				"value": "hurry",
+				"type": "Text"
+			},
+			"django_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#2fa281",
+				"type": "Color"
+			},
+			"java_name": {
+				"__TYPE__": "FieldContent",
+				"value": "gulf",
+				"type": "Text"
+			},
+			"java_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#08d5c2",
+				"type": "Color"
+			}
+		},
+		"items": []
+	}
+]
