@@ -19,31 +19,31 @@
             "placeholder": ""
           }
         },
-        "react_name": {
+        "angular_name": {
           "type": "Text",
           "config": {
-            "label": "React",
+            "label": "Angular",
             "placeholder": ""
           }
         },
-        "react_color": {
+        "angular_color": {
           "type": "Color",
           "config": {
-            "label": "React Color",
+            "label": "Angular Color",
             "placeholder": ""
           }
         },
-        "next_js_name": {
+        "docker_name": {
           "type": "Text",
           "config": {
-            "label": "Next.js",
+            "label": "Docker",
             "placeholder": ""
           }
         },
-        "next_js_color": {
+        "docker_color": {
           "type": "Color",
           "config": {
-            "label": "Next.js Color",
+            "label": "Docker Color",
             "placeholder": ""
           }
         },

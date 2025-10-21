@@ -14,15 +14,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 export type TechListProps = SliceComponentProps<Content.TechListSlice>;
 
+// Narrow type for the slice primary data to include snake_case fields used in templates
+type Primary = {
+  heading?: string;
+  angular_name?: string;
+  angular_color?: string;
+  docker_name?: string;
+  docker_color?: string;
+  django_name?: string;
+  django_color?: string;
+  java_name?: string;
+  java_color?: string;
+};
+
 const TechList = ({ slice }: TechListProps): JSX.Element => {
   const component = useRef(null);
+  const primary = slice.primary as Primary;
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // create as many GSAP animations and/or ScrollTriggers here as you want...
       const tl = gsap.timeline({
         scrollTrigger: {
-          pin: true, // pin the trigger element while active
+          pin: true, 
           start: "top bottom",
           end: "bottom top",
           scrub: 4,
@@ -48,7 +61,7 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
         },
       );
     }, component);
-    return () => ctx.revert(); // cleanup!
+    return () => ctx.revert(); 
   }, []);
 
   return (
@@ -61,23 +74,23 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
     >
       <Bounded as="div">
         <Heading size="xl" className="mb-8" as="h2">
-          {slice.primary.heading}
+          {primary.heading}
         </Heading>
       </Bounded>
 
       <div
         className="tech-row mb-8 flex items-center justify-center gap-4 text-slate-700"
-        aria-label={slice.primary.react_name || ""}
+        aria-label={primary.angular_name || ""}
       >
         {Array.from({ length: 15 }, (_, index) => (
           <React.Fragment key={index}>
             <span
               className={"tech-item text-8xl font-extrabold uppercase tracking-tighter"}
               style={{
-                color: index === 7 && slice.primary.react_color ? slice.primary.react_color : "inherit",
+                color: index === 7 && primary.angular_color ? primary.angular_color : "inherit",
               }}
             >
-              {slice.primary.react_name}
+              {primary.angular_name}
             </span>
             <span className="text-3xl">
               <MdCircle />
@@ -88,17 +101,17 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
 
       <div
         className="tech-row mb-8 flex items-center justify-center gap-4 text-slate-700"
-        aria-label={slice.primary.next_js_name || ""}
+        aria-label={primary.docker_name || ""}
       >
         {Array.from({ length: 15 }, (_, index) => (
           <React.Fragment key={index}>
             <span
               className={"tech-item text-8xl font-extrabold uppercase tracking-tighter"}
               style={{
-                color: index === 7 && slice.primary.next_js_color ? slice.primary.next_js_color : "inherit",
+                color: index === 7 && primary.docker_color ? primary.docker_color : "inherit",
               }}
             >
-              {slice.primary.next_js_name}
+              {primary.docker_name}
             </span>
             <span className="text-3xl">
               <MdCircle />
@@ -109,17 +122,17 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
 
       <div
         className="tech-row mb-8 flex items-center justify-center gap-4 text-slate-700"
-        aria-label={slice.primary.django_name || ""}
+        aria-label={primary.django_name || ""}
       >
         {Array.from({ length: 15 }, (_, index) => (
           <React.Fragment key={index}>
             <span
               className={"tech-item text-8xl font-extrabold uppercase tracking-tighter"}
               style={{
-                color: index === 7 && slice.primary.django_color ? slice.primary.django_color : "inherit",
+                color: index === 7 && primary.django_color ? primary.django_color : "inherit",
               }}
             >
-              {slice.primary.django_name}
+              {primary.django_name}
             </span>
             <span className="text-3xl">
               <MdCircle />
@@ -130,17 +143,17 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
 
       <div
         className="tech-row mb-8 flex items-center justify-center gap-4 text-slate-700"
-        aria-label={slice.primary.java_name || ""}
+        aria-label={primary.java_name || ""}
       >
         {Array.from({ length: 15 }, (_, index) => (
           <React.Fragment key={index}>
             <span
               className={"tech-item text-8xl font-extrabold uppercase tracking-tighter"}
               style={{
-                color: index === 7 && slice.primary.java_color ? slice.primary.java_color : "inherit",
+                color: index === 7 && primary.java_color ? primary.java_color : "inherit",
               }}
             >
-              {slice.primary.java_name}
+              {primary.java_name}
             </span>
             <span className="text-3xl">
               <MdCircle />

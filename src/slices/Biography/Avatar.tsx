@@ -34,7 +34,7 @@ export default function Avatar({
       );
 
       window.onmousemove = (e) => {
-        if (!component.current) return; // no component, no animation!
+        if (!component.current) return; 
         const componentRect = (
           component.current as HTMLElement
         ).getBoundingClientRect();

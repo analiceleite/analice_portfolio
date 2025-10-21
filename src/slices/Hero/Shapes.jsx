@@ -8,7 +8,7 @@ import { gsap } from "gsap";
 
 export default function Shapes() {
   return (
-    <div className="row-span-1 row-start-1 -mt-9 aspect-square  md:col-span-1 md:col-start-2 md:mt-0">
+    <div className="row-span-1 row-start-1 -mt-9 aspect-square md:col-span-1 md:col-start-2 md:mt-0 overflow-visible">
       <Canvas
         className="z-0"
         shadows
@@ -37,27 +37,37 @@ function Geometries() {
     {
       position: [0, 0, 0],
       r: 0.3,
-      geometry: new THREE.IcosahedronGeometry(3), // Gem
+      geometry: new THREE.IcosahedronGeometry(2.5), // Gem central 
     },
     {
-      position: [1, -0.75, 4],
+      position: [0.8, -0.5, 3],
       r: 0.4,
-      geometry: new THREE.CapsuleGeometry(0.5, 1.6, 2, 16), // Pill
+      geometry: new THREE.TorusKnotGeometry(0.6, 0.25, 100, 16), // Nó complexo 
     },
     {
-      position: [-1.4, 2, -4],
+      position: [-1.2, 1.5, -3],
       r: 0.6,
-      geometry: new THREE.DodecahedronGeometry(1.5), // Soccer ball
+      geometry: new THREE.DodecahedronGeometry(1.2), // Dodecaedro 
     },
     {
-      position: [-0.8, -0.75, 5],
+      position: [-0.6, -0.5, 4],
       r: 0.5,
-      geometry: new THREE.TorusGeometry(0.6, 0.25, 16, 32), // Donut
+      geometry: new THREE.TorusGeometry(0.5, 0.2, 16, 32), // Donut 
     },
     {
-      position: [1.6, 1.6, -4],
+      position: [1.3, 1.3, -3],
       r: 0.7,
-      geometry: new THREE.OctahedronGeometry(1.5), // Diamond
+      geometry: new THREE.OctahedronGeometry(1.2), // Diamante 
+    },
+    {
+      position: [-1.6, -0.3, -1.5],
+      r: 0.5,
+      geometry: new THREE.TetrahedronGeometry(1), // Pirâmide 
+    },
+    {
+      position: [1.8, 0.3, 1.5],
+      r: 0.45,
+      geometry: new THREE.SphereGeometry(0.7, 32, 32), // Esfera 
     },
   ];
 
@@ -68,23 +78,51 @@ function Geometries() {
   ];
 
   const materials = [
-    new THREE.MeshStandardMaterial({ color: 0x0a74da, roughness: 0 }), 
-    new THREE.MeshStandardMaterial({ color: 0x0e6b9c, roughness: 0.3 }),  
-    new THREE.MeshStandardMaterial({ color: 0x1282a2, roughness: 0.2 }),  
-    new THREE.MeshStandardMaterial({ color: 0x1a91c1, roughness: 0.1 }),  
-    new THREE.MeshStandardMaterial({ color: 0x2c82c9, roughness: 0.15 }), 
-    new THREE.MeshStandardMaterial({ color: 0x5dade2, roughness: 0.1 }),  
-    new THREE.MeshStandardMaterial({ color: 0x73b8e2, roughness: 0.05 }), 
-    new THREE.MeshStandardMaterial({
-      color: 0x4f8bd2,
+    new THREE.MeshStandardMaterial({ 
+      color: 0x7c3aed, // purple-600
+      roughness: 0,
+      metalness: 0.3,
+    }), 
+    new THREE.MeshStandardMaterial({ 
+      color: 0x8b5cf6, // purple-500
       roughness: 0.1,
       metalness: 0.5,
+    }),  
+    new THREE.MeshStandardMaterial({ 
+      color: 0x9333ea, // purple-600 variant
+      roughness: 0.2,
+      metalness: 0.4,
+    }),  
+    new THREE.MeshStandardMaterial({ 
+      color: 0xa855f7, // purple-500 variant
+      roughness: 0.15,
+      metalness: 0.6,
+    }),  
+    new THREE.MeshStandardMaterial({ 
+      color: 0x6d28d9, // purple-700
+      roughness: 0.25,
+      metalness: 0.3,
+    }), 
+    new THREE.MeshStandardMaterial({ 
+      color: 0xc084fc, // purple-400
+      roughness: 0.05,
+      metalness: 0.7,
+    }),  
+    new THREE.MeshStandardMaterial({ 
+      color: 0xd8b4fe, // purple-300
+      roughness: 0.1,
+      metalness: 0.5,
+    }), 
+    new THREE.MeshStandardMaterial({
+      color: 0x5b21b6, // purple-800
+      roughness: 0.2,
+      metalness: 0.8,
     }),
   ];
   
   return geometries.map(({ position, r, geometry }) => (
     <Geometry
-      key={JSON.stringify(position)} // Unique key
+      key={JSON.stringify(position)}
       position={position.map((p) => p * 2)}
       geometry={geometry}
       soundEffects={soundEffects}
@@ -154,7 +192,7 @@ function Geometry({ r, position, geometry, soundEffects, materials }) {
           onPointerOut={handlePointerOut}
           visible={visible}
           material={startingMaterial}
-        ></mesh>
+        />
       </Float>
     </group>
   );
